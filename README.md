@@ -43,7 +43,7 @@ TWYGOAPI_PASSWORD=secret
 #### Documentação de informações enviadas e recebidas estão na documentação do prestador de serviço
 
 ````
-public function listaAlunos(): array;
+public function listaAlunos();
 public function criaAluno(array $dadosAluno);
 public function visualizaAluno(int $idAluno);
 public function atualizaAluno(int $idAluno, array $dadosAluno);

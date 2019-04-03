@@ -7,7 +7,7 @@ final class BasePsyTwygo extends AbstractPsyTwygo
 {
 
 
-    public function listaAlunos(): array
+    public function listaAlunos()
     {
 
         return $this->executaGet($this->urlBase . 'students');
