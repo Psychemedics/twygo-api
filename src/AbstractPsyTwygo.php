@@ -60,4 +60,80 @@ abstract class AbstractPsyTwygo implements PsyTwygoInterface
 
         $this->twygoToken = $retorno['access_token'];
     }
+
+    protected function executaGet($url)
+    {
+
+        $this->psyTwygoCurl = new PsyTwygoCurl($url, $this->twygoToken);
+
+        try {
+
+            $retorno = $this->psyTwygoCurl->get();
+        } catch (PsyTwygoException $psyTwygoException) {
+
+            throw $psyTwygoException;
+        } catch (Exception $exception) {
+
+            throw new PsyTwygoException($exception->getMessage(), 500);
+        }
+
+        return $retorno;
+    }
+
+    protected function executaPost($url, $dados)
+    {
+
+        $this->psyTwygoCurl = new PsyTwygoCurl($url, $this->twygoToken);
+
+        try {
+
+            $retorno = $this->psyTwygoCurl->post($dados);
+        } catch (PsyTwygoException $psyTwygoException) {
+
+            throw $psyTwygoException;
+        } catch (Exception $exception) {
+
+            throw new PsyTwygoException($exception->getMessage(), 500);
+        }
+
+        return $retorno;
+    }
+
+    protected function executaPut($url, $dados)
+    {
+
+        $this->psyTwygoCurl = new PsyTwygoCurl($url, $this->twygoToken);
+
+        try {
+
+            $retorno = $this->psyTwygoCurl->put($dados);
+        } catch (PsyTwygoException $psyTwygoException) {
+
+            throw $psyTwygoException;
+        } catch (Exception $exception) {
+
+            throw new PsyTwygoException($exception->getMessage(), 500);
+        }
+
+        return $retorno;
+    }
+
+    protected function executaDelete($url)
+    {
+
+        $this->psyTwygoCurl = new PsyTwygoCurl($url, $this->twygoToken);
+
+        try {
+
+            $retorno = $this->psyTwygoCurl->delete();
+        } catch (PsyTwygoException $psyTwygoException) {
+
+            throw $psyTwygoException;
+        } catch (Exception $exception) {
+
+            throw new PsyTwygoException($exception->getMessage(), 500);
+        }
+
+        return $retorno;
+    }
 }

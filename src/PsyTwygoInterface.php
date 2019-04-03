@@ -6,7 +6,7 @@ namespace PsyTwygo;
 interface PsyTwygoInterface
 {
 
-    public function listaAlunos();
+    public function listaAlunos(): array;
 
     public function criaAluno(array $dadosAluno);
 
@@ -20,7 +20,9 @@ interface PsyTwygoInterface
 
     public function inscreveAlunoEvento(int $idAluno, int $idEvento);
 
-    public function setaSituacaoInscricao(int $idAluno, array $dadosInscricao);
+    public function visualizaInscricao(int $idInscricao);
+
+    public function setaSituacaoInscricao(int $idInscricao, array $dadosInscricao);
 
     public function linkLoginEvento(int $idEvento);
 }
