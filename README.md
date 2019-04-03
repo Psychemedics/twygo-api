@@ -1,4 +1,4 @@
-# Twygo API
+# Twygo API para Laravel
 
 ##### _Versão: v1_
 
@@ -30,14 +30,10 @@ php artisan vendor:publish --provider="PsyTwygo\ServiceProvider"
 
 ### ENV
 ````
-TWYGOAPI_URL=http://localhost/api/
+TWYGOAPI_URL=http://localhost/
 TWYGOAPI_VERSAO=v1
 TWYGOAPI_ORGID=0
-````
-
-## Uso
-````
-Route::middleware('psyauth')->get('/user', function (Request $request) {
-    return $request->user();
-});
+TWYGOAPI_GRANTTYPE=password
+TWYGOAPI_USERNAME=email@example.com
+TWYGOAPI_PASSWORD=secret
 ````
