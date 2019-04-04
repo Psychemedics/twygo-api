@@ -45,12 +45,12 @@ TWYGOAPI_PASSWORD=secret
 ````
 public function listaAlunos();
 public function criaAluno(array $dadosAluno);
-public function visualizaAluno(int $idAluno);
-public function atualizaAluno(int $idAluno, array $dadosAluno);
-public function excluiAluno(int $idAluno);
-public function listaInscricoesAluno(int $idAluno);
-public function inscreveAlunoEvento(int $idAluno, int $idEvento);
-public function visualizaInscricao(int $idInscricao);
-public function setaSituacaoInscricao(int $idInscricao, array $dadosInscricao);
-public function linkLoginEvento(int $idEvento);
+public function visualizaAluno($idAluno);
+public function atualizaAluno($idAluno, array $dadosAluno);
+public function excluiAluno($idAluno);
+public function listaInscricoesAluno($idAluno);
+public function inscreveAlunoEvento($idAluno, $idEvento);
+public function visualizaInscricao($idInscricao);
+public function setaSituacaoInscricao($idInscricao, array $dadosInscricao);
+public function linkLoginEvento($idEvento);
 ````
