@@ -19,31 +19,31 @@ final class BasePsyTwygo extends AbstractPsyTwygo
         return $this->executaPost($this->urlBase . 'students', $dadosAluno);
     }
 
-    public function visualizaAluno(int $idAluno)
+    public function visualizaAluno($idAluno)
     {
 
         return $this->executaGet($this->urlBase . 'students/' . $idAluno);
     }
 
-    public function atualizaAluno(int $idAluno, array $dadosAluno)
+    public function atualizaAluno($idAluno, array $dadosAluno)
     {
 
         return $this->executaPut($this->urlBase . 'students/' . $idAluno, $dadosAluno);
     }
 
-    public function excluiAluno(int $idAluno)
+    public function excluiAluno($idAluno)
     {
 
         return $this->executaDelete($this->urlBase . 'students/' . $idAluno);
     }
 
-    public function listaInscricoesAluno(int $idAluno)
+    public function listaInscricoesAluno($idAluno)
     {
 
         return $this->executaGet($this->urlBase . 'students/' . $idAluno . '/events');
     }
 
-    public function inscreveAlunoEvento(int $idAluno, int $idEvento)
+    public function inscreveAlunoEvento($idAluno, $idEvento)
     {
 
         $dados = [
@@ -54,19 +54,19 @@ final class BasePsyTwygo extends AbstractPsyTwygo
         return $this->executaPost($this->urlBase . 'students_events', $dados);
     }
 
-    public function visualizaInscricao(int $idInscricao)
+    public function visualizaInscricao($idInscricao)
     {
 
         return $this->executaGet($this->urlBase . 'students_events/' . $idInscricao);
     }
 
-    public function setaSituacaoInscricao(int $idInscricao, array $dadosInscricao)
+    public function setaSituacaoInscricao($idInscricao, array $dadosInscricao)
     {
 
         return $this->executaPut($this->urlBase . 'students_events/' . $idInscricao . '/update_status', $dadosInscricao);
     }
 
-    public function linkLoginEvento(int $idEvento)
+    public function linkLoginEvento($idEvento)
     {
 
         return $this->executaGet($this->urlBase . 'students_events/' . $idEvento . '/link_to_learn');
